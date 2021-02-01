@@ -1,2 +1,140 @@
 @import "variables";
 @import "~bootstrap/scss/card";
+
+/**
+ * Card
+ */
+
+ .pgn__card {
+  .full-card-click:after {
+    // Any element using this class will become the element that receives a click
+    // when any part of the card is clicked.
+    //
+    // Note: any element that should be "lifted" outside of this click should be relatively
+    // positioned, e.g. action buttons in the footer should remain clickable outside of the
+    // full card click.
+    
+    // TODO: make this class be added conditionally on some component via a prop rather than explicitly
+    // passing ``className="full-card-click"``.
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+ }
+
+/**
+ * Card Header
+ */
+
+ .pgn__card-header {
+  @extend .card-body;
+  @extend .pb-0;
+}
+
+.pgn__card-header-title {
+  @extend .m-0;
+
+  &.card-title {
+    a  {
+      color: $black;
+    }
+  }
+}
+
+/**
+ * Card Section
+ */
+
+.pgn__card-section {
+  @extend .card-body;
+  @extend .py-3;
+}
+
+.pgn__card-section-actions {
+  @extend .mt-2;
+  @extend .mb-0;
+  @extend .text-right;
+  position: relative;
+}
+
+.pgn__card-section-action {
+  @extend .ml-2;
+  @extend .btn;
+  @extend .btn-sm;
+
+  &:first-child {
+    @extend .ml-0;
+  }
+}
+
+// .pgn__card-section-content {}
+// .pgn__card-section-title {}
+
+/**
+ * Card Divider
+ */
+
+.pgn__card-divider {
+  height: 0;
+  margin: $card-divider-margin-y 0;
+  overflow: hidden;
+  border-top: 1px solid $card-divider-bg;
+}
+
+/**
+ * Card Footer
+ */
+
+.pgn__card-footer {
+  @extend .card-body;
+  @extend .pt-0;
+
+  @extend .d-flex;
+  @extend .justify-content-between;
+
+  &.stacked {
+    @extend .d-block;
+
+    .pgn__card-footer-actions {
+      @extend .text-left;
+
+      &:not(:last-child) {
+        @extend .mb-2;
+      }
+
+      .pgn__card-footer-action {
+        @extend .btn-block;
+        @extend .text-center;
+        @extend .m-0;
+        @extend .mb-2;
+      }
+    }
+  }
+}
+
+.pgn__card-footer-content {
+  @extend .small;
+  position: relative;
+
+  .btn {
+    @extend .btn-sm;
+  }
+}
+
+.pgn__card-footer-actions {
+  @extend .text-right;
+  flex: 1;
+  position: relative;
+}
+
+.pgn__card-footer-action {
+  @extend .ml-3;
+  @extend .btn;
+
+  &:first-child {
+    @extend .ml-0;
+  }
+}

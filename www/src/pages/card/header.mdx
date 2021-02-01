@@ -1,0 +1,61 @@
+---
+title: 'Card Header'
+type: 'component'
+status: 'In progress'
+designStatus: 'Done'
+devStatus: 'In progress'
+notes: |
+  Extends Card component from react-bootstrap/Card.
+---
+
+import get from 'lodash/get';
+import SingleComponentStatus from '../../components/SingleComponentStatus';
+
+# Card: Header
+
+<SingleComponentStatus
+  frontmatter={
+    get(props, 'pageContext.frontmatter') ? props.pageContext.frontmatter : null
+  }
+/>
+
+<p>This component utilizes and extends many of the components of react-bootstrap/Card.</p>
+<p>
+  <a href="https://react-bootstrap.github.io/components/cards/" target="_blank" rel="noopener noreferrer">
+    See react-bootstrap for its documentation.
+  </a>
+</p>
+
+### Card.Header
+
+##### Basic Usage
+
+```jsx live
+<Card>
+  <Card.Header>
+    <Card.Header.Title>Card Title</Card.Header.Title>
+  </Card.Header>
+</Card>
+```
+
+##### Small Variant
+```jsx live
+<Card>
+  <Card.Header>
+    <Card.Header.Title small>
+      Card Title
+    </Card.Header.Title>
+  </Card.Header>
+</Card>
+```
+
+##### Custom Title Sizes
+```jsx live
+<Card>
+  <Card.Header>
+    <Card.Header.Title sizes={{ default: 'h2', small: 'h3' }}>
+      Card Title
+    </Card.Header.Title>
+  </Card.Header>
+</Card>
+```

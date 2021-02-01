@@ -96,10 +96,16 @@ export { default as BulkActions } from './DataTable/BulkActions';
 export { default as TableControlBar } from './DataTable/TableControlBar';
 export { default as ToggleButton, ToggleButtonGroup } from './ToggleButton';
 export { default as Variant } from './utils/constants';
-export { default as useWindowSize } from './hooks/useWindowSize';
+
+// Hooks
+export {
+  useReversedChildren,
+  useWindowSize,
+} from './hooks';
 
 // Pass through any needed whole third-party library functionality
 // useTable for example is needed to use the DataTable component seamlessly
 // rather than setting a peer dependency in this project, we opt to tightly
 // couple these dependencies by passing through needed functionality.
 export { useTable } from 'react-table';
+export { useResizeDetector } from 'react-resize-detector';

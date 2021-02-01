@@ -1,0 +1,41 @@
+---
+title: 'Card ImageCap'
+type: 'component'
+status: 'TODO'
+designStatus: 'Done'
+devStatus: 'TODO'
+notes: |
+  Extends Card component from react-bootstrap/Card.
+---
+
+import get from 'lodash/get';
+import SingleComponentStatus from '../../components/SingleComponentStatus';
+
+# Card: Image Cap
+
+<SingleComponentStatus
+  frontmatter={
+    get(props, 'pageContext.frontmatter') ? props.pageContext.frontmatter : null
+  }
+/>
+
+<p>This component utilizes and extends many of the components of react-bootstrap/Card.</p>
+<p>
+  <a href="https://react-bootstrap.github.io/components/cards/" target="_blank" rel="noopener noreferrer">
+    See react-bootstrap for its documentation.
+  </a>
+</p>
+
+### Card.ImageCap
+
+<p class="lead">Coming soon ⌛️</p>
+
+<p>
+  For now, please use the standalone ``Card.Img`` component as shown below.
+</p>
+
+```jsx live
+<Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src="https://source.unsplash.com/400x200/?nature,flower" />
+</Card>
+```

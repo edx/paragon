@@ -1,0 +1,42 @@
+---
+title: 'useReversedChildren'
+type: 'hook'
+status: 'New'
+designStatus: 'Done'
+devStatus: 'Done'
+notes: ''
+---
+
+import get from 'lodash/get';
+import SingleComponentStatus from '../../components/SingleComponentStatus';
+import { useReversedChildren } from '~paragon-react'
+
+# useReversedChildren
+
+<SingleComponentStatus
+  frontmatter={
+    get(props, 'pageContext.frontmatter') ? props.pageContext.frontmatter : null
+  }
+/>
+
+<p>
+  This hook reverses a collection of children in a safe manner, through React.Children.
+</p>
+
+##### Basic Usage
+
+```jsx live
+function() {
+  const Example = ({ children }) => {
+    const reversedChildren = useReversedChildren(children);
+    return reversedChildren;
+  };
+
+  return (
+    <Example>
+      <div>1</div>
+      <div>2</div>
+    </Example>
+  );
+}
+```

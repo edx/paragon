@@ -1,0 +1,89 @@
+---
+title: 'useResizeDetector'
+type: 'hook'
+status: 'New'
+designStatus: 'Done'
+devStatus: 'Done'
+notes: ''
+---
+
+import get from 'lodash/get';
+import SingleComponentStatus from '../../components/SingleComponentStatus';
+import { useResizeDetector } from '~paragon-react'
+
+# useResizeDetector
+
+<SingleComponentStatus
+  frontmatter={
+    get(props, 'pageContext.frontmatter') ? props.pageContext.frontmatter : null
+  }
+/>
+
+<p>
+  This hook gives quick access to the dimensions (width/height) of any DOM
+  element in a performant way. Change the screen size to see the effect.
+</p>
+
+##### Use Case
+
+<p>
+  Generally, responsive behavior is based on the user's screen width using media queries. However, there may
+  be situations where a component needs to change its styles and/or layout based on its own width, e.g. container queries,
+  where a media query won't suffice.
+</p>
+
+##### Technical Notes
+
+<p>
+  This hooks utilizes
+  {' '}
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver" target="_blank" rel="noopener noreferrer">
+    ResizeObservers
+  </a>
+  {' '}
+  to handle element resizes natively, without relying on any window.resize listeners.
+</p>
+
+<p>
+  See
+  {' '}
+  <a href="https://www.npmjs.com/package/react-resize-detector" target="_blank" rel="noopener noreferrer">
+    https://www.npmjs.com/package/react-resize-detector
+  </a>
+  {' '}
+  for full documentation.
+</p>
+
+##### Basic Usage
+
+```jsx live
+() => {
+  const { height, width, ref } = useResizeDetector();
+
+  return (
+    <div ref={ref} className="border p-3">
+      <div>Height: {height}px</div>
+      <div>Width: {width}px</div>
+    </div>
+  );
+}
+```
+
+##### Optimizing for Performance
+
+<p>This hook may be configured to be throttled or debounced.</p>
+
+```jsx live
+() => {
+  const { height, width, ref } = useResizeDetector({
+    refreshMode: 'throttle',
+    refreshRate: 200,
+  });
+  return (
+    <div ref={ref} className="border p-3">
+      <div>Height: {height}px</div>
+      <div>Width: {width}px</div>
+    </div>
+  );
+}
+```

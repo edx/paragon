@@ -31,7 +31,6 @@ const menu = [
       { title: 'Breadcrumbs', url: '/components/breadcrumbs' },
       { title: 'Button', url: '/components/button' },
       { title: 'Button Group', url: '/components/button-group' },
-      { title: 'Card', url: '/components/card' },
       { title: 'Carousel', url: '/components/carousel' },
       { title: 'Collapsible', url: '/components/collapsible' },
       { title: 'Dropdown', url: '/components/dropdown' },
@@ -65,16 +64,29 @@ const menu = [
     ],
   },
   {
-    section: 'HOOKS',
+    section: 'CARD',
     items: [
-      { title: 'useWindowSize', url: '/hooks/useWindowSize' },
-    ],
+      { title: 'Card', url: '/card/card' },
+      { title: 'Card: Image Cap', url: '/card/image-cap' },
+      { title: 'Card: Header', url: '/card/header' },
+      { title: 'Card: Section', url: '/card/section' },
+      { title: 'Card: Divider', url: '/card/divider' },
+      { title: 'Card: Footer', url: '/card/footer' },
+    ]
   },
   {
     section: 'TABLE',
     items: [
       { title: 'DataTable', url: '/table/datatable' },
     ]
+  },
+  {
+    section: 'HOOKS',
+    items: [
+      { title: 'useResizeDetector', url: '/hooks/useResizeDetector' },
+      { title: 'useReversedChildren', url: '/hooks/useReversedChildren' },
+      { title: 'useWindowSize', url: '/hooks/useWindowSize' },
+    ],
   },
   {
     section: 'DEPRECATED',

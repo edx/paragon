@@ -1,0 +1,137 @@
+---
+title: 'Card Footer'
+type: 'component'
+status: 'In progress'
+designStatus: 'Done'
+devStatus: 'In progress'
+notes: |
+  Extends Card component from react-bootstrap/Card.
+---
+
+import get from 'lodash/get';
+import SingleComponentStatus from '../../components/SingleComponentStatus';
+
+# Card: Footer
+
+<SingleComponentStatus
+  frontmatter={
+    get(props, 'pageContext.frontmatter') ? props.pageContext.frontmatter : null
+  }
+/>
+
+<p>This component utilizes and extends many of the components of react-bootstrap/Card.</p>
+<p>
+  <a href="https://react-bootstrap.github.io/components/cards/" target="_blank" rel="noopener noreferrer">
+    See react-bootstrap for its documentation.
+  </a>
+</p>
+
+### Card.Footer
+
+<p>
+  Note: This component is responsive based on its own element width, not the screen size. See <a href="/hooks/useResizeDetector">useResizeDetector</a> for more details.
+</p>
+
+##### Basic Usage
+
+```jsx live
+<Card>
+  <Card.Footer>
+    <Card.Footer.Content>
+      Footer Text
+    </Card.Footer.Content>
+    <Card.Footer.Actions>
+        <Card.Footer.Action href="https://edx.org" className="btn-primary">
+          Action 1
+        </Card.Footer.Action>
+        <Card.Footer.Action href="https://edx.org" className="btn-tertiary">
+          Action 2
+        </Card.Footer.Action>
+      </Card.Footer.Actions>
+  </Card.Footer>
+</Card>
+```
+
+##### Kitchen Sink
+
+```jsx live
+<CardDeck>
+  <Card>
+    <Card.Footer>
+      <Card.Footer.Content>
+        Footer Text
+      </Card.Footer.Content>
+      <Card.Footer.Actions>
+        <Card.Footer.Action as={Button}>
+          Action 1
+        </Card.Footer.Action>
+        <Card.Footer.Action as={Button} variant="tertiary">
+          Action 2
+        </Card.Footer.Action>
+      </Card.Footer.Actions>
+    </Card.Footer>
+  </Card>
+  <Card>
+    <Card.Footer>
+      <Card.Footer.Content>
+        Footer Text
+      </Card.Footer.Content>
+      <Card.Footer.Actions>
+        <Card.Footer.Action as={Button}>
+          Action 1
+        </Card.Footer.Action>
+        <Card.Footer.Action as={Button} variant="tertiary">
+          Action 2
+        </Card.Footer.Action>
+      </Card.Footer.Actions>
+    </Card.Footer>
+  </Card>
+</CardDeck>
+```
+
+##### With stacked prop
+
+```jsx live
+<Card>
+  <Card.Footer stacked>
+    <Card.Footer.Content>
+      Footer Text
+    </Card.Footer.Content>
+    <Card.Footer.Actions>
+        <Card.Footer.Action href="https://edx.org" className="btn-primary">
+          Action 1
+        </Card.Footer.Action>
+        <Card.Footer.Action href="https://edx.org" className="btn-tertiary">
+          Action 2
+        </Card.Footer.Action>
+      </Card.Footer.Actions>
+  </Card.Footer>
+</Card>
+```
+
+##### With Custom Breakpoints
+
+Try reducing the breakpoints.stacked prop from 1000 to something more like 500, and
+then shrink the width of your browser until the footer hits your custom breakpoint.
+
+```jsx live
+<Card>
+  <Card.Footer
+    breakpoints={{
+      stacked: 1000,
+    }}
+  >
+    <Card.Footer.Content>
+      Footer Text
+    </Card.Footer.Content>
+    <Card.Footer.Actions>
+        <Card.Footer.Action as={Button}>
+          Action 1
+        </Card.Footer.Action>
+        <Card.Footer.Action as={Button} variant="tertiary">
+          Action 2
+        </Card.Footer.Action>
+      </Card.Footer.Actions>
+  </Card.Footer>
+</Card>
+```
