@@ -5,8 +5,7 @@ status: 'Needs Work'
 designStatus: 'Done'
 devStatus: 'To Do'
 notes: |
-  Improve prop naming. Deprecate content prop.
-  Use React.forwardRef for ref forwarding.
+  Improve prop naming. Deprecate content and destination prop.
 ---
 
 import { graphql } from 'gatsby';
@@ -22,7 +21,7 @@ import SingleComponentStatus from '../../components/SingleComponentStatus';
 ##### minimal usage
 
 ```jsx live
-<Hyperlink href="https://en.wikipedia.org/wiki/Hyperlink">edX.org</Hyperlink>
+<Hyperlink destination="https://en.wikipedia.org/wiki/Hyperlink">edX.org</Hyperlink>
 ```
 
 ##### with blank target

@@ -5,6 +5,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-sm btn btn-tertiary btn-sm"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span
@@ -21,6 +22,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-md btn btn-tertiary btn-md"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span
@@ -37,6 +39,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-lg btn btn-tertiary btn-lg"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span
@@ -53,6 +56,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-sm pgn__avatar-button-hide-label btn btn-tertiary btn-sm"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span
@@ -68,6 +72,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-md pgn__avatar-button-hide-label btn btn-tertiary btn-md"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span
@@ -83,6 +88,7 @@ Array [
   <button
     className="btn-avatar pgn__avatar-button-avatar pgn__avatar-button-avatar-lg pgn__avatar-button-hide-label btn btn-tertiary btn-lg"
     disabled={false}
+    onClick={[Function]}
     type="button"
   >
     <span

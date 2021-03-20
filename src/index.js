@@ -114,11 +114,20 @@ export { default as TableFooter } from './DataTable/TableFooter';
 export { default as CardView } from './DataTable/CardView';
 export { default as ToggleButton, ToggleButtonGroup } from './ToggleButton';
 export { default as Variant } from './utils/constants';
-export { default as useWindowSize } from './hooks/useWindowSize';
-export { default as useToggle } from './hooks/useToggle';
+
+// Custom hooks
+export {
+  useToggle,
+  useWindowSize,
+} from './hooks';
 
 // Pass through any needed whole third-party library functionality
 // useTable for example is needed to use the DataTable component seamlessly
 // rather than setting a peer dependency in this project, we opt to tightly
 // couple these dependencies by passing through needed functionality.
 export { useTable } from 'react-table';
+
+// ``ParagonProvider`` is a HOC that allows consumers of @edx/paragon to inject dependencies
+// to enable dispatching analytics events from components, i18n, and logging using services
+// from @edx/frontend-platform.
+export { default as ParagonProvider } from './ParagonProvider';

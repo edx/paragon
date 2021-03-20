@@ -71,6 +71,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.6",
+    "core-js": "^3.9.0",
     "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
@@ -89,6 +90,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
+    "regenerator-runtime": "^0.13.7",
     "sass-loader": "^7.1.0",
     "semantic-release": "^17.0.0"
   },
