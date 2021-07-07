@@ -1,0 +1,45 @@
+
+// Scrollable
+
+// Padding applied to the scrollable body
+$scrollable-inner-padding:               1.5rem !default;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $scrollable-inner-padding
+$scrollable-footer-margin-between:       .5rem !default;
+
+$scrollable-dialog-margin:               1.5rem !default;
+$scrollable-dialog-margin-y-sm-up:       1.75rem !default;
+
+$scrollable-title-line-height:           $line-height-base !default;
+
+$scrollable-content-color:               null !default;
+$scrollable-content-bg:                  $white !default;
+$scrollable-content-border-color:        rgba($black, .2) !default;
+$scrollable-content-border-width:        0 !default;
+$scrollable-content-border-radius:       $border-radius-lg !default;
+$scrollable-content-inner-border-radius: subtract($scrollable-content-border-radius, $scrollable-content-border-width) !default;
+$scrollable-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
+$scrollable-content-box-shadow-sm-up:    0px 10px 20px rgba($black, 0.15), 0px 8px 20px rgba($black, 0.15) !default;
+
+$scrollable-backdrop-bg:                 $black !default;
+$scrollable-backdrop-opacity:            .5 !default;
+$scrollable-header-border-color:         $border-color !default;
+$scrollable-footer-border-color:         $scrollable-header-border-color !default;
+$scrollable-header-border-width:         $scrollable-content-border-width !default;
+$scrollable-footer-border-width:         $scrollable-header-border-width !default;
+$scrollable-header-padding-y:            1rem !default;
+$scrollable-header-padding-x:            1.5rem !default;
+$scrollable-header-padding:              $scrollable-header-padding-y $scrollable-header-padding-x !default; // Keep this for backwards compatibility
+$scrollable-footer-padding-y:            1rem !default;
+$scrollable-footer-padding-x:            1.5rem !default;
+$scrollable-footer-padding:              $scrollable-footer-padding-y $scrollable-footer-padding-x !default; // Keep this for backwards compatibility
+
+$scrollable-xl:                          1140px !default;
+$scrollable-lg:                          800px !default;
+$scrollable-md:                          500px !default;
+$scrollable-sm:                          400px !default;
+
+$scrollable-fade-transform:              translate(0, -50px) !default;
+$scrollable-show-transform:              none !default;
+$scrollable-transition:                  transform .3s ease-out !default;
+$scrollable-scale-transform:             scale(1.02) !default;
