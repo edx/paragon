@@ -9,11 +9,11 @@
     &::before{
         content:"";
         background-color: transparent;
-        background-image: linear-gradient(#605c5c, #b8bebe, transparent 50%);
+        box-shadow: 2px 7px 10px -1px rgba(0,0,0,0.4);
         display: block;
-        height: 20px;
+        height: 26px;
         position: sticky;
-        top: -$scrollable-inner-padding;
+        top: -3.55rem;
         margin-top: -$scrollable-inner-padding;
         margin-left: -$scrollable-inner-padding;
         margin-right: -$scrollable-inner-padding;
@@ -23,15 +23,16 @@
     &::after{
         content:"";
         background-color: transparent;
-        background-image: linear-gradient(360deg, #605c5c, #b8bebe, transparent 50%);
+        box-shadow: 2px 7px 10px -1px rgba(0,0,0,0.4);
         display: block;
-        height: 20px;
+        height: 26px;
         position: sticky;
-        bottom: -$scrollable-inner-padding / 2;
-        margin-bottom: -$scrollable-inner-padding;
+        bottom: -3.55rem;
+        margin-top: -$scrollable-inner-padding;
         margin-left: -$scrollable-inner-padding;
         margin-right: -$scrollable-inner-padding;
         opacity: .5;
+        z-index: 2;
     }
 
     &.pgn__scrollable-body-scroll-bottom {
