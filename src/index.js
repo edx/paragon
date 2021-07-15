@@ -23,6 +23,7 @@ export { default as Container } from './Container';
 export { Col, Row } from './Layout';
 export { default as Collapse } from './Collapse';
 export { default as Collapsible } from './Collapsible';
+export { default as Scrollable } from './Scrollable';
 export { default as Dropdown, DropdownButton, SplitButton } from './Dropdown';
 export { default as Fade } from './Fade';
 export { default as Fieldset } from './Fieldset';

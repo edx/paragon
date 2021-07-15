@@ -1,0 +1,77 @@
+@import "variables";
+
+.pgn__scrollable-body {
+    flex-grow: 1;
+    padding: $scrollable-inner-padding $scrollable-inner-padding $scrollable-inner-padding / 2;
+    overflow: auto;
+    position: relative;
+
+    &::before{
+        content:"";
+        background-color: transparent;
+        box-shadow: 2px 7px 10px -1px rgba(0,0,0,0.4);
+        display: block;
+        height: 26px;
+        position: sticky;
+        top: -3.55rem;
+        margin-top: -$scrollable-inner-padding;
+        margin-left: -$scrollable-inner-padding;
+        margin-right: -$scrollable-inner-padding;
+        opacity: .5;
+        z-index: 2;
+    }
+    &::after{
+        content:"";
+        background-color: transparent;
+        box-shadow: 2px 7px 10px -1px rgba(0,0,0,0.4);
+        display: block;
+        height: 26px;
+        position: sticky;
+        bottom: -3.55rem;
+        margin-top: -$scrollable-inner-padding;
+        margin-left: -$scrollable-inner-padding;
+        margin-right: -$scrollable-inner-padding;
+        opacity: .5;
+        z-index: 2;
+    }
+
+    &.pgn__scrollable-body-scroll-bottom {
+        &::before{
+        opacity: .5;
+        }
+        &::after{
+        opacity: 0;
+        }
+    }
+
+    &.pgn__scrollable-body-scroll-top {
+        &::before{
+        opacity: 0;
+        }
+        &::after{
+        opacity: .5;
+        }
+    }
+
+    &.pgn__scrollable-body-scroll-top.pgn__scrollable-body-scroll-bottom {
+        &::before{
+        opacity: 0;
+        }
+        &::after{
+        opacity: 0;
+        }
+    }
+
+    .pgn__scrollable-body-content > *:last-child {
+        margin-bottom: 0;
+    }
+
+    // Avoid doubling up on padding with containers
+    .pgn__scrollable-body-content > .container-fluid {
+        padding: 0;
+    }
+
+    .pgn__modal.pgn__scrollable-scroll-fullscreen & {
+        box-shadow: none;
+    }
+}
