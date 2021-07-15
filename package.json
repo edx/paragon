@@ -54,8 +54,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -79,16 +79,16 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^2.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.5.0",
     "jest-cli": "^24.7.1",
     "markdown-loader-jest": "^0.1.1",
     "node-sass": "^5.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-test-renderer": "^17.0.0",
     "semantic-release": "^17.0.0"
   },
   "jest": {
