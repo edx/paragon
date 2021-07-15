@@ -1,6 +1,5 @@
 .pgn__searchfield {
     @extend .border;
-    @extend .rounded;
     transition: $input-transition;
 
     &.has-focus {
@@ -21,7 +20,7 @@
             width : 0;
             height: 0;
         }
-  
+
         // clear browser 'x' from Chrome
         &::-webkit-search-decoration,
         &::-webkit-search-cancel-button,
