@@ -56,6 +56,8 @@ export { default as ListBox } from './ListBox';
 export { default as ListBoxOption } from './ListBoxOption';
 export { default as MailtoLink } from './MailtoLink';
 export { default as Media } from './Media';
+export { default as Menu } from './Menu';
+export { default as MenuItem } from './Menu/MenuItem';
 export { default as Modal } from './Modal';
 export { default as ModalCloseButton } from './Modal/ModalCloseButton';
 export { default as FullscreenModal } from './Modal/FullscreenModal';

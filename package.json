@@ -42,6 +42,7 @@
     "lodash.uniqby": "^4.7.0",
     "mailto-link": "^1.0.0",
     "prop-types": "^15.7.2",
+    "react-arrow-key-navigation-hook": "^1.0.2",
     "react-bootstrap": "^1.3.0",
     "react-focus-on": "^3.5.0",
     "react-popper": "^2.2.4",

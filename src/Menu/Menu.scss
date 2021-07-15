@@ -1,0 +1,67 @@
+.pgn__menu-item {
+  .pgn__menu-item-content-spacer {
+    flex-grow: 1;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  border-radius: 0;
+
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+  }
+
+  $background: $btn-tertiary-bg;
+  $border: transparent;
+  $hover-background: $btn-tertiary-hover-bg;
+  $hover-border: transparent;
+  $active-background: $btn-tertiary-active-bg;
+  $active-border: transparent;
+
+  color: $btn-tertiary-color;
+  border-color: $border;
+
+  @include hover {
+    color: $btn-tertiary-color;
+    border-color: $hover-border;
+    background: $hover-background;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $btn-tertiary-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  .btn-icon-before {
+    margin-inline-end: 0.5rem;
+    margin-left: -0.25em;
+  }
+
+  .btn-icon-after {
+    margin-inline-start: 0.5rem;
+    margin-right: -0.25em;
+  }
+}
